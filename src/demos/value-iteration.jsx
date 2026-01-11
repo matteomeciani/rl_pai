@@ -157,9 +157,7 @@ const ValueIterationViz = () => {
   };
 
   return (
-    <div style={{
-      minHeight: '100vh',
-      background: 'linear-gradient(135deg, #0f0f1a 0%, #1a1a2e 50%, #16213e 100%)',
+    <div className="min-h-screen bg-slate-950" style={{
       padding: '32px',
       fontFamily: "'JetBrains Mono', 'Fira Code', monospace",
       color: '#e2e8f0',

@@ -3,15 +3,34 @@ import DQNVisualization from './demos/dqn_visualization';
 import RLVisualization from './demos/rl-visualization';
 import RMaxVisualization from './demos/rmax-visualization';
 import ValueIteration from './demos/value-iteration';
+import BayesianOptimization from './demos/bayesian-optimization';
+import BayesianRegression from './demos/bayesian_regression';
+import GPVisualization from './demos/gp-visualization';
 
 const demos = [
   {
-    id: 'dqn',
-    title: 'DQN: Deep Q-Network',
-    description: 'Understanding Online and Target Networks',
-    component: DQNVisualization,
-    icon: '🤖',
-    color: 'from-emerald-500 to-cyan-500'
+    id: 'bayesian-regression',
+    title: 'Bayesian Linear Regression',
+    description: 'Probabilistic Approach to Linear Models',
+    component: BayesianRegression,
+    icon: '📈',
+    color: 'from-teal-500 to-cyan-500'
+  },
+  {
+    id: 'gp-visualization',
+    title: 'Gaussian Processes',
+    description: 'Non-parametric Bayesian Models',
+    component: GPVisualization,
+    icon: '📉',
+    color: 'from-rose-500 to-pink-500'
+  },
+  {
+    id: 'bayesian-optimization',
+    title: 'Bayesian Optimization',
+    description: 'Efficient Global Optimization with Gaussian Processes',
+    component: BayesianOptimization,
+    icon: '🎲',
+    color: 'from-yellow-500 to-orange-500'
   },
   {
     id: 'rl',
@@ -22,6 +41,14 @@ const demos = [
     color: 'from-purple-500 to-pink-500'
   },
   {
+    id: 'value-iteration',
+    title: 'Value Iteration',
+    description: 'Dynamic Programming for MDPs',
+    component: ValueIteration,
+    icon: '📊',
+    color: 'from-blue-500 to-indigo-500'
+  },
+  {
     id: 'rmax',
     title: 'R-Max Algorithm',
     description: 'Exploration-Exploitation with R-Max',
@@ -30,12 +57,12 @@ const demos = [
     color: 'from-orange-500 to-red-500'
   },
   {
-    id: 'value-iteration',
-    title: 'Value Iteration',
-    description: 'Dynamic Programming for MDPs',
-    component: ValueIteration,
-    icon: '📊',
-    color: 'from-blue-500 to-indigo-500'
+    id: 'dqn',
+    title: 'DQN: Deep Q-Network',
+    description: 'Understanding Online and Target Networks',
+    component: DQNVisualization,
+    icon: '🤖',
+    color: 'from-emerald-500 to-cyan-500'
   }
 ];
 
@@ -67,14 +94,29 @@ function App() {
       <div className="container mx-auto px-6 py-12">
         <div className="text-center mb-12">
           <h1 className="text-5xl font-bold mb-4 bg-gradient-to-r from-emerald-400 via-cyan-400 to-purple-400 bg-clip-text text-transparent">
-            Interactive RL Demos
+            PAI Demos
           </h1>
-          <p className="text-slate-400 text-lg">
-            Explore reinforcement learning concepts through interactive visualizations
+          <p className="text-slate-400 text-lg mb-3">
+            Explore machine learning and reinforcement learning concepts through interactive visualizations
+          </p>
+          <p className="text-slate-500 text-sm">
+            Author: <span className="text-slate-400 font-semibold">mmeciani</span>
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-5xl mx-auto">
+        <div className="max-w-4xl mx-auto mb-8 p-4 rounded-lg border border-amber-500/30 bg-amber-500/5">
+          <div className="flex items-start gap-3">
+            <span className="text-amber-500 text-xl mt-0.5">⚠️</span>
+            <div>
+              <h3 className="text-amber-400 font-semibold mb-1">Disclaimer</h3>
+              <p className="text-slate-400 text-sm">
+                This material was fully AI-generated. There is no guarantee of the correctness of the content presented in these demonstrations.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-7xl mx-auto">
           {demos.map((demo, index) => (
             <button
               key={demo.id}

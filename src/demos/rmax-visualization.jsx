@@ -205,9 +205,7 @@ const RmaxVisualization = () => {
   };
 
   return (
-    <div style={{
-      minHeight: '100vh',
-      background: 'linear-gradient(180deg, #0c0c1e 0%, #1a1a3e 50%, #2d2d5a 100%)',
+    <div className="min-h-screen bg-slate-950" style={{
       fontFamily: "'Crimson Text', Georgia, serif",
       color: '#f4e4bc',
       padding: '20px',

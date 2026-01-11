@@ -319,7 +319,7 @@ export default function RLVisualization() {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white p-6">
+    <div className="min-h-screen bg-slate-950 text-white p-6">
       <style>{`
         @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap');
         * { font-family: 'Space Grotesk', sans-serif; }
