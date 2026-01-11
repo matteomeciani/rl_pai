@@ -3,9 +3,11 @@ import DQNVisualization from './demos/dqn_visualization';
 import RLVisualization from './demos/rl-visualization';
 import RMaxVisualization from './demos/rmax-visualization';
 import ValueIteration from './demos/value-iteration';
+import PolicyIteration from './demos/policy-iteration';
 import BayesianOptimization from './demos/bayesian-optimization';
 import BayesianRegression from './demos/bayesian_regression';
 import GPVisualization from './demos/gp-visualization';
+import VariationalInference from './demos/variational-inference';
 
 const demos = [
   {
@@ -25,6 +27,14 @@ const demos = [
     color: 'from-rose-500 to-pink-500'
   },
   {
+    id: 'variational-inference',
+    title: 'Variational Inference',
+    description: 'Approximate Bayesian Inference via Optimization',
+    component: VariationalInference,
+    icon: '🔬',
+    color: 'from-violet-500 to-purple-500'
+  },
+  {
     id: 'bayesian-optimization',
     title: 'Bayesian Optimization',
     description: 'Efficient Global Optimization with Gaussian Processes',
@@ -39,6 +49,14 @@ const demos = [
     component: RLVisualization,
     icon: '🎯',
     color: 'from-purple-500 to-pink-500'
+  },
+  {
+    id: 'policy-iteration',
+    title: 'Policy Iteration',
+    description: 'Iterative Policy Evaluation and Improvement',
+    component: PolicyIteration,
+    icon: '🔄',
+    color: 'from-sky-500 to-blue-500'
   },
   {
     id: 'value-iteration',
